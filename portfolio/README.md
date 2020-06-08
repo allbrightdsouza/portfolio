@@ -1,2 +1,2 @@
-## Portfolio
-# This portfolio was built using React.
+# Allbright's Portfolio
+This portfolio was built using React.

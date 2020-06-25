@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
+// import {useState, useEffect} from 'react';
 import {Navbar, Nav} from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import NavbarCollapse from 'react-bootstrap/NavbarCollapse';
+// import NavbarCollapse from 'react-bootstrap/NavbarCollapse';
 
 const CustomNavBar = () => {
     return(

@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.my-card-Img {
+  height: 260px !important;
+  margin-bottom: 3%;
+}
+
+div.card {
+  margin: 2%;
+  /* box-shadow: 1px 3px 1px #9e9e9e; */
+  background-color: #fef6e4;
+}
+
+.article-section {
+  margin: 5% 10%;
+}

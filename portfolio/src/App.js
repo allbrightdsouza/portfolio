@@ -12,6 +12,7 @@ import PageNotFound from './pages/PageNotFound';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import CustomNavBar from './components/CustomNavBar';
+import ArticlePage from './pages/ArticlePage';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="/home/" component={Home} exact/>
             <Route path="/projects/" component={Projects} exact/>
             <Route path="/contact/" component={Contact} exact/>
+            <Route path="/article/:name" component={ArticlePage} exact/>
             <Redirect from="/" to="/home" exact/>
             <Route component={PageNotFound} />
           </Switch>

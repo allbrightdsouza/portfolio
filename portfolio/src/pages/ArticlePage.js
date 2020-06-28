@@ -1,6 +1,6 @@
 import React from 'react';
 import {Articles} from '../data/data'
-const { Container } = require("react-bootstrap");
+const { Container, Col, Row, Image } = require("react-bootstrap");
 
 const ArticlePage = (props) => {
     const article_name = props.match.params.name;
@@ -29,9 +29,20 @@ const ArticlePage = (props) => {
     const RenderBody = (name) => {
     }
     return (
-        <Container>
+        <Container id="article-container">
             <h1>{article.name}</h1>
-            {RenderBody(article_name)}
+            <p>
+                {article.body}
+            </p>
+            <Row>
+            { article.img_urls.map((img,key) => {
+                return (
+                    <Col xl="6">
+                        <Image src={img} key={key} className="img-article"/>
+                    </Col>
+                );
+            })}
+            </Row>
         </Container>
     )
 } 

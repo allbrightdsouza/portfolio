@@ -26,7 +26,7 @@ const ArticleCards = (props) => {
                                                         {article.name === ""? article.img_url : article.name}
                                                     </Card.Title>
                                                     <Container>
-                                                        <Image className="my-card-Img" src= {article.img_url} thumbnail fluid/>
+                                                        <Image className="my-card-Img" src= {article.img_urls[0]} thumbnail fluid/>
                                                     </Container>
                                             </Container>
                                         </Card>

@@ -1,3 +1,13 @@
-.App {
-  text-align: center;
+#name-section {
+    margin-top: calc(150px - 50px);
+}
+
+.name h2 {
+    color: #fffffe;
+    font-size: 40px;
+}
+
+.name.inverted h2{
+    color: #0F0E17;
+    transform: scale(1, -1)
 }

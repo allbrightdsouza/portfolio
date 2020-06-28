@@ -14,22 +14,27 @@ const ArticleCards = (props) => {
         });
     }
     return (
-        <Row>
-            { articles.map( (article,key) => {
-                return (
-                        <Col xl={4} key={key}>
-                                <Card className="clickable" onClick = {() => RedirectToArticle(article)} >
-                                    <Container fluid="xl">
-                                            <Card.Title style={{fontStyle: "italic"}}>
-                                                {article.name === ""? article.img_url : article.name}
-                                            </Card.Title>
-                                            <Image className="my-card-Img" src= {article.img_url} thumbnail fluid/>
-                                    </Container>
-                                </Card>
-                        </Col>
-                );
-            })}
-        </Row>
+        <>
+            <h2 className="section-title"> My Work </h2>
+                <Row>
+                    { articles.map( (article,key) => {
+                        return (
+                                <Col lg="4" md="6" key={key}>
+                                        <Card className="clickable" onClick = {() => RedirectToArticle(article)} >
+                                            <Container>
+                                                    <Card.Title style={{fontStyle: "italic"}}>
+                                                        {article.name === ""? article.img_url : article.name}
+                                                    </Card.Title>
+                                                    <Container>
+                                                        <Image className="my-card-Img" src= {article.img_url} thumbnail fluid/>
+                                                    </Container>
+                                            </Container>
+                                        </Card>
+                                </Col>
+                        );
+                    })}
+                </Row>
+        </>
     );
 }
 

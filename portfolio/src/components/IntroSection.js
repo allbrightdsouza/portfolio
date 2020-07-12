@@ -1,34 +1,44 @@
 import React from 'react';
 import { Container, Image, Col, Row } from 'react-bootstrap';
+import {ReactComponent as Email} from '../images/email.svg';
+import {ReactComponent as Github} from '../images/giithub.svg';
+import {ReactComponent as Linkedin} from '../images/linkedin.svg';
 
 const IntroSection = () => {
     return(
         <>
             <Container fluid id="intro-section">
-                <h2>
-                    Hi, I am Allbright Dsouza, and I am a graduate student at USC. I am currently pursuing MS in CS, and will be graduating in Spring 2021.
-                    The one thing I love more than playing videogames is my girlfriend. Jk, I really like making videogames too. 
-                    For the past one year   I have been exploring and learning about this vast field and it intrigues me everyday.
-                </h2>
+                <p>
+                    Hi, I am Allbright Dsouza, and I am a graduate student at USC. I am currently pursuing MS in CS, and will be graduating in Spring 2021. I love playing games but get an even greater thrill making them. 
+                </p>
+                <p>
+                    I think games are an excelent medium of entertainment with the ability to immerse its audience and impact their lifes. So I strive to make games that engage the player both mentally and emotionally. 
+                </p>
+                <p>
+                    I am also Full Stack developer.
+                </p>
             </Container>
-            <div className="my-image-container">
-                <Row>
-                    <Col>
+            <Container className="my-image-container" fluid>
+                <Row fluid>
+                    <Col xs={5} md={3}>
                         <Image src={process.env.PUBLIC_URL+"/images/allbright.jpg"} id="my-photo" roundedCircle />
                     </Col>
-                    <Col lg="8">
-                        <Row id="name-section">
-                            <Col xl="12" className="name">
-                                <h2>Allbright D'Souza</h2>
-                            </Col>
-                            <Col className="name inverted">
-                                <h2>Allbright D'Souza</h2>
-                            </Col>
+                    <Col xs={7} md={6}>
+                        <Row>                            
+                            <Col className="name name-section">                             
+                                <p>Allbright D'Souza</p>
+                                <span className="name inverted"><p>Allbright D'Souza</p></span>                                                                                                                    
+                            </Col>                                                                                    
                         </Row>
+                    </Col>
+                    <Col className="social-icons my-auto">                        
+                        <a href="mailto:allbrightdsouza7@gmail.com" target="_blank" rel="noopener noreferrer"><Email />  </a>
+                        <a href="https://github.com/allbrightdsouza" target="_blank" rel="noopener noreferrer"><Github />  </a>
+                        <a href="https://www.linkedin.com/in/allbrightdsouza/" target="_blank" rel="noopener noreferrer"><Linkedin /></a>
                     </Col>
                 </Row>
                 
-            </div>
+            </Container>
         </>
 
     );

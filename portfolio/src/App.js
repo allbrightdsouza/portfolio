@@ -13,6 +13,7 @@ import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import CustomNavBar from './components/CustomNavBar';
 import ArticlePage from './pages/ArticlePage';
+import BottomBar from './components/BottomBar';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <Route component={PageNotFound} />
           </Switch>
         </div>
+        <BottomBar />
       </div>
     </Router>
   );

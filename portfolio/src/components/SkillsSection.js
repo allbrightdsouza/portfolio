@@ -3,21 +3,45 @@ import React from 'react';
 
 const skills = [
     {
+        title: "Frameworks",
+        items: [
+            "Unity",
+            "Android",
+            "Maya"            
+        ]
+    },
+    {
         title: "Web Dev",
         items: [
             "HTML",
             "CSS",
             "JS",
-            "React"
+            "React",
+            "Node"
         ]
     },
     {
-        title: "Programming",
+        title: "DBMS",
+        items: [
+            "SQL",
+            "Mongo"                       
+        ]
+    },
+    {
+        title: "Languages",
         items: [
             "C++",
             "C#",
             "Python",
             "Java"
+        ]
+    },
+    {
+        title: "Misc",
+        items: [
+            "Git",
+            "Perforce",
+            "REST APIs",            
         ]
     },
 ]
@@ -26,29 +50,29 @@ const SkillsSection = () => {
     return (
         <>
         <Container id="skills-section">
-            <h2 className="section-title title-dark"> My Skills </h2>
+            <h1 className="section-title title-dark header"> My Skills </h1>
         </Container>
         { skills.map( (article,key) => {
             return (
                     <Card className="skills-card">
-                        <Row>
-                            <Col lg={8}>
+                        {/* <Row> */}
+                            {/* <Col lg={8}> */}
                                 <Card.Body>
-                                    <Card.Title style={{fontStyle: "italic"}} className="skills-title">
-                                        {article.title}
-                                    </Card.Title>
-                                    <Card.Text >
-                                        <ListGroup horizontal="sm">
-                                            {
-                                                article.items.map((skill,key) => 
-                                                    <ListGroup.Item>{skill}</ListGroup.Item>
-                                                )
-                                            }
-                                        </ListGroup>
-                                    </Card.Text>
+                                    <Row>
+                                        <Col xs={4} md={4} lg={4} className="skills-title-col">
+                                            <Card.Title className="skills-title">
+                                                {article.title}
+                                            </Card.Title>
+                                        </Col>
+                                        <Col xs={8} md={8} lg={8} className="skills">
+                                            <Card.Text className = "skills-text">
+                                                {article.items.join(", ")}
+                                            </Card.Text>
+                                        </Col>
+                                    </Row>
                                 </Card.Body>
-                            </Col>
-                        </Row>
+                            {/* </Col> */}
+                        {/* </Row> */}
                     </Card>);
             })}
     </>

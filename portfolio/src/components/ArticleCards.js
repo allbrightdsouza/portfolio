@@ -15,22 +15,21 @@ const ArticleCards = (props) => {
     }
     return (
         <>
-            <h2 className="section-title"> My Work </h2>
+            <h2 className="section-title header"> My Work </h2>
                 <Row>
                     { articles.map( (article,key) => {
                         return (
-                                <Col lg="4" md="6" key={key}>
-                                        <Card className="clickable" onClick = {() => RedirectToArticle(article)} >
-                                            <Container>
-                                                    <Card.Title style={{fontStyle: "italic"}}>
-                                                        {article.name === ""? article.img_url : article.name}
-                                                    </Card.Title>
-                                                    <Container>
-                                                        <Image className="my-card-Img" src= {article.img_urls[0]} thumbnail fluid/>
-                                                    </Container>
-                                            </Container>
-                                        </Card>
-                                </Col>
+                            <Col lg="4" md="6" key={key}>
+                                <Card className="clickable" onClick = {() => RedirectToArticle(article)} >                                                                                                                                                
+                                    <Card.Img className="my-card-Img" src= {article.img_urls[0]}/>
+                                    <Card.ImgOverlay>
+                                        <Card.Title fluid className="my-card-Title">
+                                                {article.name === ""? article.img_url : article.name}
+                                        </Card.Title>
+                                    </Card.ImgOverlay>                                                                                                            
+                                                
+                                </Card>                                        
+                            </Col>
                         );
                     })}
                 </Row>
